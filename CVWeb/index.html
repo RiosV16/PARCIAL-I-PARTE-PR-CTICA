@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andrés Felipe Ríos Vásquez — Hoja de Vida</title>
   <meta name="description" content="Hoja de vida web de Andrés Felipe Ríos Vásquez, estudiante de Ingeniería de Sistemas." />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Andrés Felipe Ríos Vásquez — Hoja de Vida" />
+  <meta property="og:description" content="Hoja de vida de estudiante de Ingeniería de Sistemas" />
+  <meta property="og:type" content="website" />
 
-  <!--
-    Pico CSS: reemplaza este enlace por la copia local del proyecto
-    (carpeta projects del repositorio del docente), por ejemplo:
-    <link rel="stylesheet" href="css/pico.min.css" />
-  -->
+  <!-- Pico CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -18,16 +19,23 @@
 
   <div class="layout">
 
-    <!-- Información personal / Habilidades / Contacto -->
+    <!-- ============================================================
+    SIDEBAR
+    ============================================================ -->
     <aside class="sidebar">
       <section aria-labelledby="info-personal">
-        <div class="avatar" aria-hidden="true">AR</div>
-        <h1 id="info-personal">Andrés Felipe Ríos Vásquez</h1>
-        <p class="role">Estudiante de Ingeniería de Sistemas</p>
+        <div class="avatar-wrapper">
+          <div class="avatar" aria-hidden="true">AR</div>
+        </div>
+        <div class="name-title">
+          <h1 id="info-personal">Andrés Felipe Ríos Vásquez</h1>
+          <p class="role">Estudiante de Ingeniería de Sistemas</p>
+          <div class="sidebar-divider" aria-hidden="true"></div>
+        </div>
       </section>
 
       <section aria-labelledby="habilidades">
-        <h2 id="habilidades">Habilidades</h2>
+        <h2 id="habilidades">⚡ Habilidades</h2>
         <ul class="skills-list">
           <li>HTML5</li>
           <li>CSS3</li>
@@ -43,16 +51,31 @@
       </section>
 
       <section id="contacto" aria-labelledby="contacto-h">
-        <h2 id="contacto-h">Contacto</h2>
+        <h2 id="contacto-h">📬 Contacto</h2>
         <ul class="contact-list">
-          <li>✉️ <a href="andres.rios01@uceva.edu.co">andresrios.dev@gmail.com</a></li>
-          <li>💻 <a href="https://github.com/RiosV16" target="_blank" rel="noopener">github.com/RiosV16</a></li>
-          <li>🔗 <a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/andres-rios-dev</a></li>
-          <li>📍 Yotoco, Valle del Cauca, Colombia</li>
+          <li>
+            <span class="icon" aria-hidden="true">✉️</span>
+            <a href="mailto:andresrios.dev@gmail.com">andresrios.dev@gmail.com</a>
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">💻</span>
+            <a href="https://github.com/RiosV16" target="_blank" rel="noopener">github.com/RiosV16</a>
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">🔗</span>
+            <a href="#" target="_blank" rel="noopener">linkedin.com/in/andres-rios-dev</a>
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">📍</span>
+            Yotoco, Valle del Cauca, Colombia
+          </li>
         </ul>
       </section>
     </aside>
 
+    <!-- ============================================================
+    MAIN CONTENT
+    ============================================================ -->
     <main class="content">
 
       <!-- Perfil profesional -->
@@ -112,30 +135,30 @@
 
       <!-- Proyectos -->
       <section id="proyectos" aria-labelledby="proyectos-h">
-        <h2 id="proyectos-h">Proyectos</h2>
+        <h2 id="proyectos-h">Proyectos destacados</h2>
         <div class="project-grid">
           <article class="project-card">
-            <h3>Catálogo de Videojuegos</h3>
+            <h3>🎮 Catálogo de Videojuegos</h3>
             <p>Página web con HTML5, CSS3 y Pico CSS que organiza videojuegos por género en secciones semánticas.</p>
-            <a href="#" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
           </article>
 
           <article class="project-card">
-            <h3>Sistema de gestión de parqueadero</h3>
+            <h3>🚗 Sistema de gestión de parqueadero</h3>
             <p>Aplicación en Java para el control de entradas y salidas de vehículos en un parqueadero.</p>
-            <a href="#" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
           </article>
 
           <article class="project-card">
-            <h3>Taller de HTML/CSS</h3>
+            <h3>🎨 Taller de HTML/CSS</h3>
             <p>10 ejercicios de CSS (selectores, box model, Flexbox, Grid, responsive design) resueltos en grupo.</p>
-            <a href="#" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
           </article>
 
           <article class="project-card">
-            <h3>Comandos de terminal en Linux</h3>
+            <h3>🐧 Comandos de terminal en Linux</h3>
             <p>Ejercicios prácticos de comandos básicos: ls, cd, alias, mkdir y whoami.</p>
-            <a href="#" target="_blank" rel="noopener">Ver repositorio →</a>
+            <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
           </article>
         </div>
       </section>
