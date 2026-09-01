@@ -6,7 +6,7 @@
   <title>Andrés Felipe Ríos Vásquez — Hoja de Vida</title>
   <meta name="description" content="Hoja de vida web de Andrés Felipe Ríos Vásquez, estudiante de Ingeniería de Sistemas." />
   
-  <!-- Open Graph / Social -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Andrés Felipe Ríos Vásquez — Hoja de Vida" />
   <meta property="og:description" content="Hoja de vida de estudiante de Ingeniería de Sistemas" />
   <meta property="og:type" content="website" />
@@ -23,10 +23,34 @@
     SIDEBAR
     ============================================================ -->
     <aside class="sidebar">
-      <section aria-labelledby="info-personal">
-        <div class="avatar-wrapper">
-          <div class="avatar" aria-hidden="true">AR</div>
+
+      <!-- ==========================================================
+      FOTO DE PERFIL — CORREGIDO
+      ========================================================== -->
+      <section class="profile-photo-section" aria-label="Foto de perfil">
+        <div class="photo-container has-image" id="photoContainer" role="button" tabindex="0" aria-label="Subir foto de perfil">
+          <!-- Imagen de perfil -->
+          <img 
+            id="profileImage"
+            src="https://ui-avatars.com/api/?name=Andres+Rios&background=d4a853&color=111&size=85&font-size=0.5&bold=true"
+            alt="Foto de perfil de Andrés Felipe Ríos Vásquez"
+          />
+          <!-- Placeholder (oculto inicialmente porque has-image está presente) -->
+          <div class="photo-placeholder" id="photoPlaceholder">
+            📷
+            <span>Subir foto</span>
+          </div>
         </div>
+        <button class="photo-upload-btn" id="uploadBtn" type="button">
+          ✎ Cambiar foto
+        </button>
+        <input type="file" id="photoInput" accept="image/*" />
+      </section>
+
+      <!-- ==========================================================
+      INFORMACIÓN PERSONAL
+      ========================================================== -->
+      <section aria-labelledby="info-personal">
         <div class="name-title">
           <h1 id="info-personal">Andrés Felipe Ríos Vásquez</h1>
           <p class="role">Estudiante de Ingeniería de Sistemas</p>
@@ -34,8 +58,11 @@
         </div>
       </section>
 
+      <!-- ==========================================================
+      HABILIDADES
+      ========================================================== -->
       <section aria-labelledby="habilidades">
-        <h2 id="habilidades">⚡ Habilidades</h2>
+        <h2 id="habilidades"><span class="icon">⚡</span> Habilidades</h2>
         <ul class="skills-list">
           <li>HTML5</li>
           <li>CSS3</li>
@@ -43,15 +70,19 @@
           <li>JavaScript</li>
           <li>Java</li>
           <li>C</li>
-          <li>Git &amp; GitHub</li>
+          <li>Git</li>
+          <li>GitHub</li>
           <li>Linux</li>
-          <li>CMD / Bash</li>
+          <li>Bash</li>
           <li>MySQL</li>
         </ul>
       </section>
 
+      <!-- ==========================================================
+      CONTACTO
+      ========================================================== -->
       <section id="contacto" aria-labelledby="contacto-h">
-        <h2 id="contacto-h">📬 Contacto</h2>
+        <h2 id="contacto-h"><span class="icon">📬</span> Contacto</h2>
         <ul class="contact-list">
           <li>
             <span class="icon" aria-hidden="true">✉️</span>
@@ -67,10 +98,11 @@
           </li>
           <li>
             <span class="icon" aria-hidden="true">📍</span>
-            Yotoco, Valle del Cauca, Colombia
+            <span class="text">Yotoco, Valle del Cauca, Colombia</span>
           </li>
         </ul>
       </section>
+
     </aside>
 
     <!-- ============================================================
@@ -80,7 +112,7 @@
 
       <!-- Perfil profesional -->
       <section id="perfil" aria-labelledby="perfil-h">
-        <h2 id="perfil-h">Perfil profesional</h2>
+        <h2 id="perfil-h"><span class="section-icon">👤</span> Perfil profesional</h2>
         <p class="lead-text">
           Estudiante de Ingeniería de Sistemas en la Unidad Central del Valle del Cauca (UCEVA),
           con interés particular en el desarrollo web y buenas prácticas de programación.
@@ -92,7 +124,7 @@
 
       <!-- Formación académica -->
       <section id="formacion" aria-labelledby="formacion-h">
-        <h2 id="formacion-h">Formación académica</h2>
+        <h2 id="formacion-h"><span class="section-icon">🎓</span> Formación académica</h2>
 
         <div class="timeline-item">
           <h3>Ingeniería de Sistemas</h3>
@@ -112,7 +144,7 @@
 
       <!-- Experiencia -->
       <section id="experiencia" aria-labelledby="experiencia-h">
-        <h2 id="experiencia-h">Experiencia</h2>
+        <h2 id="experiencia-h"><span class="section-icon">💼</span> Experiencia</h2>
 
         <div class="timeline-item">
           <h3>Soporte técnico independiente</h3>
@@ -135,7 +167,7 @@
 
       <!-- Proyectos -->
       <section id="proyectos" aria-labelledby="proyectos-h">
-        <h2 id="proyectos-h">Proyectos destacados</h2>
+        <h2 id="proyectos-h"><span class="section-icon">🚀</span> Proyectos destacados</h2>
         <div class="project-grid">
           <article class="project-card">
             <h3>🎮 Catálogo de Videojuegos</h3>
@@ -144,19 +176,19 @@
           </article>
 
           <article class="project-card">
-            <h3>🚗 Sistema de gestión de parqueadero</h3>
+            <h3>🚗 Gestión de parqueadero</h3>
             <p>Aplicación en Java para el control de entradas y salidas de vehículos en un parqueadero.</p>
             <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
           </article>
 
           <article class="project-card">
             <h3>🎨 Taller de HTML/CSS</h3>
-            <p>10 ejercicios de CSS (selectores, box model, Flexbox, Grid, responsive design) resueltos en grupo.</p>
+            <p>10 ejercicios de CSS (selectores, Flexbox, Grid, responsive design) resueltos en grupo.</p>
             <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
           </article>
 
           <article class="project-card">
-            <h3>🐧 Comandos de terminal en Linux</h3>
+            <h3>🐧 Comandos de terminal Linux</h3>
             <p>Ejercicios prácticos de comandos básicos: ls, cd, alias, mkdir y whoami.</p>
             <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
           </article>
@@ -165,7 +197,7 @@
 
       <!-- Cursos y certificaciones -->
       <section id="cursos" aria-labelledby="cursos-h">
-        <h2 id="cursos-h">Cursos y certificaciones</h2>
+        <h2 id="cursos-h"><span class="section-icon">📚</span> Cursos y certificaciones</h2>
         <ul class="courses-list">
           <li>
             <span class="course-name">Responsive Web Design</span>
@@ -184,6 +216,103 @@
 
     </main>
   </div>
+
+  <!-- ============================================================
+  JAVASCRIPT — Subir foto de perfil (CORREGIDO)
+  ============================================================ -->
+  <script>
+    (function() {
+      const photoContainer = document.getElementById('photoContainer');
+      const photoInput = document.getElementById('photoInput');
+      const uploadBtn = document.getElementById('uploadBtn');
+      const profileImage = document.getElementById('profileImage');
+      const photoPlaceholder = document.getElementById('photoPlaceholder');
+
+      // Función para mostrar la imagen seleccionada
+      function handleFile(file) {
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          // Asignar la imagen al src
+          profileImage.src = e.target.result;
+          // Marcar el contenedor como "con imagen"
+          photoContainer.classList.add('has-image');
+          // Asegurar que la imagen se muestre y el placeholder se oculte
+          profileImage.style.display = 'block';
+          photoPlaceholder.style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+      }
+
+      // Función para restaurar el placeholder (eliminar foto)
+      function removeImage() {
+        photoContainer.classList.remove('has-image');
+        profileImage.src = '';
+        profileImage.style.display = 'none';
+        photoPlaceholder.style.display = 'flex';
+      }
+
+      // Click en el contenedor de la foto → abrir selector
+      photoContainer.addEventListener('click', function() {
+        photoInput.click();
+      });
+
+      // Click en el botón "Cambiar foto"
+      uploadBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        photoInput.click();
+      });
+
+      // Cuando se selecciona un archivo
+      photoInput.addEventListener('change', function(e) {
+        if (this.files && this.files[0]) {
+          handleFile(this.files[0]);
+        }
+        // Resetear el input para poder seleccionar el mismo archivo de nuevo
+        this.value = '';
+      });
+
+      // Soporte para arrastrar y soltar
+      photoContainer.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        this.style.borderColor = '#e8c06a';
+        this.style.boxShadow = '0 0 50px rgba(212, 168, 83, 0.3)';
+      });
+
+      photoContainer.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        this.style.borderColor = '';
+        this.style.boxShadow = '';
+      });
+
+      photoContainer.addEventListener('drop', function(e) {
+        e.preventDefault();
+        this.style.borderColor = '';
+        this.style.boxShadow = '';
+        const files = e.dataTransfer.files;
+        if (files && files[0]) {
+          handleFile(files[0]);
+        }
+      });
+
+      // Keyboard accessibility
+      photoContainer.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          photoInput.click();
+        }
+      });
+
+      // Doble click para eliminar foto
+      photoContainer.addEventListener('dblclick', function(e) {
+        if (confirm('¿Eliminar foto de perfil?')) {
+          removeImage();
+        }
+      });
+
+    })();
+  </script>
 
 </body>
 </html>
